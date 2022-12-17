@@ -15,10 +15,47 @@
         <div class="foods">
         </div>
     </div>
-    
+    <div class="bill">
+        <div class="bill__details ">
+            <div class="flex">
+                <p>جمع کل سفارشات:</p>
+                <p class="flex__price"><span id="all-price">0</span>تومان</p>
+            </div>
+            <div class="flex">
+                <p>حق سرویس و کارمزد:</p>
+                <p class="flex__price"><span id="service">0</span>تومان</p>
+            </div>
+            <div class="flex">
+                <p>تخفیف:</p>
+                <p class="flex__price"><span id="off">0</span>درصد</p>
+            </div>
+            <div class="bill__discount">
+                <input class="bill__input" type="text" placeholder="کد تخفیف" id="off-input">
+                <div id="discount-check" class="btn btn--check">
+                    <i class="bi bi-check"></i>
+                </div>
+            </div>
+            <div class="bill__pay">
+                <div class="flex">
+                    <p>مبلغ قابل پرداخت:</p>
+                    <p class="flex__price"><span id="pay">0</span>تومان</p>
+                </div>
+            </div>
+            <div class="bill__submit">
+                <button class="btn btn--order" onclick="openModal()">ثبت سفارش</button>
+            </div>
+        </div>
+    </div>
 </section>
-<section class="modalBg"></section>
-<section class="modal"></section>
+<section class="modalBg">
+    <section class="modal">
+        <div id="modal">
+            <p>سفارش شما با موفقیت ثبت شد.</p>
+            <button class="btn btn--ok" onclick="closeModal()">باشه</button>
+        </div>
+    </section>
+</section>
+
 <script src="main.js"></script>
 </body>
 </html>
