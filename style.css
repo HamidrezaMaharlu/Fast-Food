@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap");
+@font-face {
+  font-family: vazirdig;
+  src: url("./font/Vazir-Medium-FD.woff2");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1b1b1b;
+  background-color: #da291c;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 980px) {
+  .main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  background-color: #f0f8ff;
+  border-radius: 0.8rem;
+  height: 96%;
+}
+@media (min-width: 980px) {
+  .menu {
+    width: 60%;
+  }
+}
+.menu h1 {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.menu .foods {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 75%;
+  padding: 2rem;
+  overflow: auto;
+  direction: ltr;
+}
+@media (min-width: 980px) {
+  .menu .foods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.menu .foods .foods__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.175);
+  background-color: white;
+  direction: rtl;
+}
+.menu .foods .foods__card .foods__img {
+  width: 10rem;
+  height: 10rem;
+}
+.menu .foods .foods__card .foods__detail {
+  grid-area: 1/2/2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--name {
+  font-weight: bold;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--wrapper--counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--wrapper--counter .foods__detail--decAndIncBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--wrapper--counter .foods__detail--decAndIncBtn div {
+  color: #9e1212;
+  font-size: 2rem;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--wrapper--counter .foods__detail--decAndIncBtn div:hover {
+  color: #700d0d;
+}
+.menu .foods .foods__card .foods__detail .foods__detail--wrapper--counter .foods__detail--decAndIncBtn .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.bill {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-radius: 0.8rem;
+  width: 100%;
+  height: 90%;
+}
+@media (min-width: 980px) {
+  .bill {
+    height: 60%;
+    width: 35%;
+    margin-top: 0;
+    padding: 1rem 2rem;
+  }
+}
+.bill .bill__details .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+.bill .bill__details .flex .flex__price {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.bill .bill__details .bill__discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+.bill .bill__details .bill__discount .bill__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 0.5rem;
+  font-family: "Vazirmatn", sans-serif;
+}
+.bill .bill__details .bill__discount .btn--check {
+  background-color: #9e1212;
+  width: 10%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bill .bill__details .bill__pay {
+  background-color: #ffc72e;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+.bill .bill__details .bill__submit {
+  width: 100%;
+}
+.bill .bill__details .bill__submit button {
+  font-family: "Vazirmatn", sans-serif;
+  width: 100%;
+  background-color: #9e1212;
+  border: 1px solid #9e1212;
+  padding: 1.6rem 0;
+  color: white;
+}
+.bill .bill__details .bill__submit button:hover {
+  background-color: #700d0d;
+}
+
+.modalBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+@media (min-width: 980px) {
+  .modalBg {
+    height: 100%;
+  }
+}
+.modalBg #modal {
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+.modalBg #modal .btn--ok {
+  background-color: #9e1212;
+  margin-top: 2rem;
+  color: white;
+  padding: 1rem 3rem;
+  border: none;
+}
+
+#modal.show {
+  display: flex;
+  animation: show 0.5s forwards;
+}
+
+#modal.close {
+  display: none;
+  animation: close 0.5s forwards;
+}
+
+/*# sourceMappingURL=style.css.map */
